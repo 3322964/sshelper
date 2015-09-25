@@ -1,0 +1,46 @@
+<!doctype html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Free Shadowsocks accounts</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="popup.js"></script>
+    <script src="jquery-2.1.4.min.js"></script> 
+    <script src="jquery.qrcode.min.js"></script> 
+  </head>
+  <body>
+    <div id="source">免费Shadowsocks账号：</div>
+    <div id="account0"></div>
+    <div id="code0" align="center"></div>
+    <div id="account1"></div>
+    <div id="code1" align="center"></div>
+    <div id="account2"></div>     
+    <div id="code2" align="center"></div>
+    <div id="status"></div>
+  </body>
+</html>
+
